@@ -7,11 +7,6 @@ import shutil
 
 app = Flask(__name__)
 
-########### TO RUN ##########
-#run 'python app.py' in cmd prompt
-#Visit http://127.0.0.1:5000/
-
-
 ######################## Misc. #########################################################
 # Check if the script is running with admin privileges
 def is_admin():
