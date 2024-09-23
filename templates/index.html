@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRIVE SUMMARY</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #ff6600;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .summary-box {
+            background-color: #333;
+            border: 2px solid #ff6600;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 20px auto;
+            width: 60%;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .summary-text {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .summary-button {
+            background-color: #ff6600;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .summary-button:hover {
+            background-color: #e65c00;
+        }
+
+        a {
+            color: #ff6600;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>DRIVE SUMMARY</h1>
+
+    <div class="summary-box">
+        <div class="summary-text">{{ result }}</div>
+        <a href="/" class="summary-button">Go back to overview</a>
+    </div>
+
+</body>
+</html>

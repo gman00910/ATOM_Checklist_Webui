@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Setting</title>
+</head>
+<body>
+    <h1>Change {{ setting }}</h1>
+
+    <form method="POST" action="{{ url_for('change_setting', setting=setting) }}">
+        {% if setting == 'computer_name' %}
+            <label for="new_value">Enter new Computer Name:</label>
+            <input type="text" name="new_value" id="new_value" required>
+
+        {% elif setting == 'time_zone' %}
+            <label for="new_value">Enter new Time Zone (e.g., 'Pacific Standard Time'):</label>
+            <input type="text" name="new_value" id="new_value" required>
+
+        {% elif setting == 'display_info' %}
+            <label for="resolution">Enter new Resolution (e.g., '1920x1080'):</label>
+            <input type="text" name="resolution" id="resolution" required>
+            <label for="refresh_rate">Enter new Refresh Rate (e.g., '60 Hz'):</label>
+            <input type="text" name="refresh_rate" id="refresh_rate" required>
+
+        {% elif setting == 'ars_shortcut' %}
+            <p>Do you want to add the ARS shortcut to your desktop?</p>
+
+        {% elif setting == 'boot_drive_version' %}
+            <label for="drive_letter">Enter the Drive Letter where UpdateARS is located:</label>
+            <input type="text" name="drive_letter" id="drive_letter" required>
+
+        {% endif %}
+
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
